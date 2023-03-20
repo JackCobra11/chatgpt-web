@@ -721,7 +721,7 @@
                                 <select id="preSetSystem">
                                     <option value="">默认</option>
                                     <option value="normal">助手</option>
-                                    <option value="cat">猫娘</option>
+                                    
                                     <option value="image">有图</option>
                                 </select>
                             </div>
@@ -931,7 +931,7 @@
         let loading = false;
         let presetRoleData = {
             "normal": "你是一个乐于助人的助手，尽量简明扼要地回答",
-            "cat": "你是一个可爱的猫娘，每句话结尾都要带个'喵'",
+            
             "image": "我给你个指令，生成相应的图片，发送图片时候请用 markdown 语言生成，不要反斜线，不要代码框，请需要使用 unsplash API ，遵循一下格式， https://source.unsplash.com/960x640/? ＜英文关键词＞"
         };
         let systemRole; // 自定义系统角色
@@ -1711,7 +1711,7 @@
             signal: downRoleController.signal
         }).then(async (response) => {
             let res = await response.json();
-            for (let i = 0; i < res.length; i++) {
+            for (let i = 0; i < 118; i++) {
                 let key = "act" + i;
                 presetRoleData[key] = res[i].prompt.trim();
                 let optionEle = document.createElement("option");
